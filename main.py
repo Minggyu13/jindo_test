@@ -4,6 +4,9 @@ import streamlit as st
 if 'to_do_list' not in st.session_state:
     st.session_state['to_do_list'] = []
 
+if 'add_task_input' not in st.session_state:
+    st.session_state['add_task_input'] = ""
+
 def add_task(task):
     if task:  # 입력된 할 일이 있을 경우에만 추가
         st.session_state['to_do_list'].append(task)
